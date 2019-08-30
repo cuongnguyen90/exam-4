@@ -12,6 +12,11 @@ let Rectangle = function () {
     this.color = COLOR;
 }
 Rectangle.prototype.render = function(){
+    let rec = document.createElement('canvas');
+        rec.id = "rectangle";
+        rec.width = WIDTH;
+        rec.height = HEIGHT;
+        document.body.appendChild(rec);
     let _canvas = document.getElementById('rectangle');
     let context = _canvas.getContext("2d");
         context.beginPath();
